@@ -99,7 +99,7 @@ export default {
       return this.menu.filter((item) => item.children);
     },
     isCollapse() {
-      return this.$store.state.tab.isCollapse;
+      return this.$store.state.isCollapse;
     },
   },
 };

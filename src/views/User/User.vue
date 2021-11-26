@@ -56,7 +56,7 @@ export default {
   },
 
   created() {
-    this.$axios.get("http://localhost:3000/getUserInfo").then((response) => {
+    this.$axios.get("/getUserInfo").then((response) => {
       this.tableData = response.data;
       this.tableDataCopy = response.data;
     });
@@ -78,7 +78,7 @@ export default {
       console.log(index, row);
     },
     handleDelete(event, index, row) {
-      this.$axios.get(`http://localhost:3000/removeUserInfo?_id=${row._id}`);
+      this.$axios.get(`/removeUserInfo?_id=${row._id}`);
       this.tableData = this.tableData.filter((item) => {
         return item._id !== row._id;
       });

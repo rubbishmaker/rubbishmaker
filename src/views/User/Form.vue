@@ -71,7 +71,7 @@ export default {
           let data = { date, name, address };
           this.$axios({
             method: "POST",
-            url: "http://localhost:3000/addUserInfo",
+            url: "/addUserInfo",
             data: Qs.stringify(data),
           }).then(this.back());
         } else {

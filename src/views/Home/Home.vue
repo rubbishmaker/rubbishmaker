@@ -79,7 +79,7 @@ export default {
   mounted() {
     //mockjs模拟生成的数据
     this.$axios({
-      url: "http://localhost:3000/gethome",
+      url: "/gethome",
     })
       .then((res) => {
         this.tableData = res.data.tableData;
@@ -206,12 +206,12 @@ export default {
       })
       .catch((e) => console.log(e));
     this.$axios({
-      url: "http://localhost:3000/dealData",
+      url: "/dealData",
     })
       .then((res) => (this.countData = res.data.countData))
       .catch((e) => console.log(e));
     this.$axios({
-      url: "http://localhost:3000/userInfo",
+      url: "/userInfo",
     })
       .then((res) => {
         const activeUserData = res.data.userInfo.activeUser;

@@ -3,18 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "client-install": "npm install --prefix server",
+    "client": "node server --prefix server",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "start": "concurrently \"npm run serve\" \"npm run client\""
   },
   "dependencies": {
     "axios": "^0.24.0",
+    "concurrently": "^6.4.0",
     "core-js": "^3.6.5",
     "echarts": "^5.2.2",
     "element-ui": "^2.15.6",
-    "express": "^4.17.1",
     "mockjs": "^1.1.0",
-    "mongoose": "^6.0.13",
     "register-service-worker": "^1.7.1",
     "swiper": "^6.8.4",
     "vue": "^2.6.11",

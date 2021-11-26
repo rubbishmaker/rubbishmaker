@@ -68,7 +68,9 @@ Vue.use(Input)
 Vue.use(Dialog)
 Vue.use(Pagination)
 
+
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
+axios.defaults.baseURL = 'http://localhost:3000'
 Vue.prototype.$axios = axios
 
 new Vue({

@@ -1,4 +1,4 @@
-export default function a(titles = '', mode = 'item'
+export default function (titles = '', mode = 'item'
   ,
   xAxistype = '',
   xAxisdata = [],
@@ -22,6 +22,8 @@ export default function a(titles = '', mode = 'item'
       bottom: "3%",
       containLabel: true
     },
+    legend: {},
+
 
     series
 

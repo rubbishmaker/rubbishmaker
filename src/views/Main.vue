@@ -24,7 +24,7 @@ export default {
   },
   computed: {
     isLogin() {
-      return this.$store.state.tab.isLogin;
+      return this.$store.state.isLogin;
     },
   },
   name: "Main",
